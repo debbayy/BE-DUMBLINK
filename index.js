@@ -8,5 +8,5 @@ const port = 5000;
 
 app.use(express.json());
 
-app.use("/api/v1/", router);
+app.use("/api/v2/", router);
 app.listen(port, () => console.log(`Listening on port ${port}!`));

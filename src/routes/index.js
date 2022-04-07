@@ -10,9 +10,15 @@ const { addlinks } = require("../controllers/links");
 
 const { auth } = require("../middlewares/auth");
 
+//requere user
+const { getUsers } = require("../controllers/user");
+
 //auth
 router.post("/register", register);
 router.post("/login", login);
+
+//user
+router.get("users", getUsers);
 
 //route grouplink
 router.post("/grouplink", auth, addGrouplink);
