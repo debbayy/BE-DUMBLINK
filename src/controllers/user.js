@@ -33,10 +33,11 @@ exports.getUsers = async (req, res) => {
       },
     });
     const data = users;
+    console.log(users);
     res.send({
       status: "success",
       data: {
-        users,
+        user,
       },
     });
   } catch (error) {
